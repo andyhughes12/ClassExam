@@ -74,7 +74,7 @@ public class Employee {
         if(phone.length() == 7){
             this.phone = phone;
         }else{
-            throw new IllegalArgumentException("Invalid Phone Number");
+            throw new IllegalArgumentException("Invalid Phone");
         }
     }
 
@@ -84,7 +84,7 @@ public class Employee {
             this.Employment = employment;
         }
         else {
-            throw new IllegalArgumentException("Invalid Title");
+            throw new IllegalArgumentException("Invalid Employment");
         }
 
     }
