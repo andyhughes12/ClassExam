@@ -1,3 +1,10 @@
+/*
+ * Andrew Hughes
+ * 10-03-2021
+ * class Test
+ *  EmployeeTest Class
+ *
+ * */
 package ie.gmit;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -23,9 +30,7 @@ public class EmployeeTest {
         assertEquals((e1.getTitle()),"Mr");
     }
     @Test
-    void testConstructorNamePass(){
-        assertEquals((e1.getName()),"Andrew");
-    }
+    void testConstructorNamePass(){ assertEquals((e1.getName()),"Andrew");}
     @Test
     void testConstructorIDPass(){
         assertEquals((e1.getID()),123456);
@@ -35,10 +40,7 @@ public class EmployeeTest {
         assertEquals((e1.getPhone()),"1234567");
     }
     @Test
-    void testConstructorEmploymentPass(){
-        assertEquals((e1.getEmployment()),"Full Time");
-    }
-
+    void testConstructorEmploymentPass(){ assertEquals((e1.getEmployment()),"Full Time"); }
     @Test
     void testConstructorAgePass(){
         assertEquals((e1.getAge()),18);
@@ -63,28 +65,28 @@ public class EmployeeTest {
     @Test
     void testConstructorIDFail()
     {
-        Exception e = assertThrows(IllegalArgumentException.class, () -> new Employee("Sir","Andrew",1234567,"1234567","Full Time",18));
+        Exception e = assertThrows(IllegalArgumentException.class, () -> new Employee("Mr","Andrew",1234567,"1234567","Full Time",18));
         assertEquals("Invalid ID", e.getMessage());
     }
 
     @Test
     void testConstructorPhoneFail()
     {
-        Exception e = assertThrows(IllegalArgumentException.class, () -> new Employee("Sir","Andrew",123456,"12345678","Full Time",18));
+        Exception e = assertThrows(IllegalArgumentException.class, () -> new Employee("Mr","Andrew",123456,"12345678","Full Time",18));
         assertEquals("Invalid Phone", e.getMessage());
     }
 
     @Test
     void testConstructorEmploymentFail()
     {
-        Exception e = assertThrows(IllegalArgumentException.class, () -> new Employee("Sir","Andrew",123456,"12345678","1 day",18));
+        Exception e = assertThrows(IllegalArgumentException.class, () -> new Employee("Mr","Andrew",123456,"1234567","Part Time",18));
         assertEquals("Invalid Employment", e.getMessage());
     }
 
     @Test
     void testConstructorAgeFail()
     {
-        Exception e = assertThrows(IllegalArgumentException.class, () -> new Employee("Sir","Andrew",123456,"12345678","1 day",16));
+        Exception e = assertThrows(IllegalArgumentException.class, () -> new Employee("Mr","Andrew",123456,"1234567","Full Time",16));
         assertEquals("Invalid Age", e.getMessage());
     }
 }

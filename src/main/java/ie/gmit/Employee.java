@@ -1,3 +1,9 @@
+/*
+* Andrew Hughes
+* 10-03-2021
+* class Test
+* Employee Class
+* */
 package ie.gmit;
 
 public class Employee {
@@ -79,7 +85,7 @@ public class Employee {
     }
 
     public void setEmployment(String employment) {
-        if ((title == "Full Time") || (title == "Part Time"))
+        if ((Employment == "Full Time") || (Employment == "Part Time"))
         {
             this.Employment = employment;
         }
